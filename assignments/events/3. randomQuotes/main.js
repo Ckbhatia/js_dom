@@ -1,8 +1,19 @@
 var quotes;
 
 // Write your code here
+let div = document.createElement('div');
+let heading = document.createElement('h2');
+let para = document.createElement('p');
 
-
+document.onkeyup = function(e) {
+     if(e.keyCode == 32) {
+        const random = Math.round(Math.random() * 77);
+        document.body.appendChild(div);
+        div.innerHTML = `<h2>${quotes[random].quoteAuthor}</h2>`;
+        div.appendChild(para);
+        para.innerText = `${quotes[random].quoteText}`;
+     }    
+}
 
 quotes = [
     {
