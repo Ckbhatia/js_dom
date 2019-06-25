@@ -39,5 +39,18 @@
     const p = document.getElementsByTagName("p")[0];
     const ul = document.getElementsByTagName("ul")[0];
     // Your code goes here
+    // 1. Change background
+    ul.style.background = "crimson";
+    // 2. Change background
+    const listItems = document.querySelectorAll('li');
+    for (let item of listItems) {
+      item.style.background = "yellow";
+    }
+    // 3. 
+    ul.children[2].style.color = 'pink';
+    ul.children[1]
+    .nextElementSibling.style.background = "blue";
+    ul.children[1]
+    .previousElementSibling.style.background = "red";
   </script>
 </html>
