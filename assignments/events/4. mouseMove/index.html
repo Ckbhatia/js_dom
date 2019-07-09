@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mouse move effect</title>
+</head>
+<body>
+    <div class="container" style="border: 4px solid rgb(183, 250, 96); height: 400px">
+        <h1 class="heading">Move Mouse Cursor</h1>
+        <p class="para1"></p>
+        <p class="para2"></p>
+        <p class="para3"></p>
+        <p class="para4"></p>
+    </div>
+    <script>
+        
+        const para1 = document.querySelector('.para1');
+        const para2 = document.querySelector('.para2');
+        const para3 = document.querySelector('.para3');
+        const para4 = document.querySelector('.para4');
+        
+        document.addEventListener('mousemove', function(e) {
+            para1.innerHTML = e.screenX;
+            para2.innerHTML = e.screenY;
+            para3.innerHTML = e.clientX;
+            para4.innerHTML = e.clientY;
+        });;
+    </script>
+</body>
+</html>

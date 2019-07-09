@@ -12,5 +12,25 @@
       <li>Favorites: <span id="favorites"></span></li>
       <li>Hometown: <span id="hometown"></span></li>
     </ul>
+    <script>
+      document.querySelector('body').style.fontFamily = "Arial, sans-serif";
+      const list = document.querySelectorAll('li');
+      let info = ['fellow', 'downtown', 'nickname'];
+      for (let k = 0; k < info.length; k++) {
+        list[k].innerHTML = info[k];
+        list[k].className = 'listItem';
+        document.querySelectorAll('.listItem')[k].style.background = 'red';
+      }
+      let img = document.createElement('img');
+      img.setAttribute('src', 'img.jpg');
+      document.body.append(img);
+
+      // Updating the google style
+      let gLogo = document.querySelector('#hplogo');
+      gLogo.setAttribute('srcset', 'https://casscommunity3.files.wordpress.com/2017/06/yahoo-logo.png');
+      let gButton = document.querySelector('.gNO89b');
+      gButton.setAttribute('value', 'Yahooo!');
+      gButton.nextElementSibling().setAttribute('value', "I'm Lucky"); 
+    </script> 
   </body>
 </html>
